@@ -1,0 +1,283 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Masters/Doctoral Thesis 
+% LaTeX Template
+% Version 2.2 (21/11/15)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Version 2.x major modifications by:
+% Vel (vel@latextemplates.com)
+%
+% This template is based on a template by:
+% Steve Gunn (http://users.ecs.soton.ac.uk/srg/softwaretools/document/templates/)
+% Sunil Patel (http://www.sunilpatel.co.uk/thesis-template/)
+%
+% Template license:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+12pt, % The default document font size, options: 10pt, 11pt, 12pt
+%oneside, % Two side (alternating margins) for binding by default, uncomment to switch to one side
+english, % ngerman for German
+onehalfspacing, % Single line spacing, alternatives: onehalfspacing or doublespacing
+%draft, % Uncomment to enable draft mode (no pictures, no links, overfull hboxes indicated)
+%nolistspacing, % If the document is onehalfspacing or doublespacing, uncomment this to set spacing in lists to single
+%liststotoc, % Uncomment to add the list of figures/tables/etc to the table of contents
+%toctotoc, % Uncomment to add the main table of contents to the table of contents
+parskip, % Uncomment to add space between paragraphs
+%nohyperref, % Uncomment to not load the hyperref package
+headsepline, % Uncomment to get a line under the header
+]{MastersDoctoralThesis} % The class file specifying the document structure
+
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+
+\usepackage{palatino} % Use the Palatino font by default
+\usepackage[style=chem-rsc]{biblatex}
+\addbibresource{Mendeley.bib} % The filename of the bibliography
+\usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
+\usepackage{rotating}
+\usepackage{graphicx}
+\graphicspath{ {figures/} }
+
+\usepackage{textcomp}
+\usepackage{textgreek}
+\usepackage{latexsym}
+\usepackage{datetime}
+
+\newdateformat{monthyeardate}{%
+  \monthname[\THEMONTH] \THEYEAR}
+%----------------------------------------------------------------------------------------
+%	MARGIN SETTINGS
+%----------------------------------------------------------------------------------------
+
+\geometry{
+	paper=a4paper, % Change to letterpaper for US letter
+	inner=2.5cm, % Inner margin
+	outer=3.8cm, % Outer margin
+	bindingoffset=2cm, % Binding offset
+	top=1.5cm, % Top margin
+	bottom=1.5cm, % Bottom margin
+	%showframe,% show how the type block is set on the page
+}
+
+%----------------------------------------------------------------------------------------
+%	THESIS INFORMATION
+%----------------------------------------------------------------------------------------
+
+\thesistitle{Structure-Activity Relationships in Self-Assembled Heparin-Binding Nanostructures} % Your thesis title, this is used in the title and abstract, print it elsewhere with \ttitle
+\supervisor{Professor David \textsc{Smith}} % Your supervisor's name, this is used in the title page, print it elsewhere with \supname
+\examiner{} % Your examiner's name, this is not currently used anywhere in the template, print it elsewhere with \examname
+\degree{MSc by Research} % Your degree name, this is used in the title page and abstract, print it elsewhere with \degreename
+\author{Kiri Amabel Thornalley} % Your name, this is used in the title page and abstract, print it elsewhere with \authorname
+\addresses{} % Your address, this is not currently used anywhere in the template, print it elsewhere with \addressname
+
+\subject{Biological Sciences} % Your subject area, this is not currently used anywhere in the template, print it elsewhere with \subjectname
+\keywords{} % Keywords for your thesis, this is not currently used anywhere in the template, print it elsewhere with \keywordnames
+\university{{University of York}} % Your university's name and URL, this is used in the title page and abstract, print it elsewhere with \univname
+\department{Chemistry} % Your department's name and URL, this is used in the title page and abstract, print it elsewhere with \deptname
+\faculty{} % Your faculty's name and URL, this is used in the title page and abstract, print it elsewhere with \facname
+
+\hypersetup{pdftitle=\ttitle} % Set the PDF's title to your title
+\hypersetup{pdfauthor=\authorname} % Set the PDF's author to your name
+\hypersetup{pdfkeywords=\keywordnames} % Set the PDF's keywords to your keywords
+
+\begin{document}
+
+\frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
+
+\pagestyle{plain} % Default to the plain heading style until the thesis style is called for the body content
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\begin{titlepage}
+\begin{center}
+
+\LARGE\textbf{\ttitle}\\[3.5cm] 
+\Large \authorname\\[2.5cm] 
+ 
+\large \degreename\\[0.5cm] % University requirement text
+\univname \\ [0.5cm]
+\deptname\\[2.5cm] % Research group name and department name
+ 
+\Large December 2017 \\[4cm] % Date
+
+ 
+\vfill
+\end{center}
+\end{titlepage}
+
+%----------------------------------------------------------------------------------------
+%	DECLARATION PAGE
+%----------------------------------------------------------------------------------------
+
+\begin{declaration}
+\addchaptertocentry{\authorshipname}
+\raggedright
+I declare that this thesis is a presentation of original work and I am the sole author. 
+\newline
+Where significant help has been given by others, this is clearly mentioned within the text. 
+\newline
+This work has not previously been presented for an award at this, or any other, University.
+\newline
+All sources used are acknowledged within the Bibliography.
+
+
+\end{declaration}
+
+\cleardoublepage
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT PAGE
+%----------------------------------------------------------------------------------------
+
+\begin{abstract}
+\raggedright
+\addchaptertocentry{\abstractname} % Add the abstract to the table of contents
+Heparin sulfate finds itself widely used as an anticoagulant within medicine. However, only one rescue agent for it exists, protamine sulfate. Protamine sulfate is an arginine-rich cationic peptide, and its use within medicine is fraught with issues and a substantial proportion of patients will experience side effects from its use. 
+Gene therapy has the potential to cure a variety of genetic disorders including Cystic Fibrosis. Viral DNA vectors work well, but there are significant safety concerns, hence the interest in the development of an effective non-viral vector method.
+
+The work in this thesis synthesised a stereoisomeric family of novel palmitic acid based cationic binders using a self-assembled multivalency (SAMul) approach. This family of novel binders comprises of two enantiomeric pairs, which were synthesised using a previously reported TBTU-mediated peptide coupling strategy and repeated Boc-(de)protection steps to afford control over the regioselectivity of the synthesis. Through the use of \textsuperscript{1}H, \textsuperscript{13}C and DEPT-135 NMR alongside Infrared spectroscopy and Mass Spectrometry analysis, it has been shown that the target compounds have successfully been synthesised. 
+Significant analysis of the behaviour of these SAMul systems has been performed via a series of binding assays, as well as Transmission Electron Microscopy, Dynamic Light Scattering and Isothermal Titration Calorimetry. 
+
+It has been determined that all four novel binders undergo self-assembly in solution, and this self-assembly is a prerequisite for successful heparin sulfate and/or DNA binding.  All four systems bind both heparin sulfate and DNA at micromolar effective concentrations, much lower than the CAC obtained by Nile Red, which implies the presence of the biological polyanion enhances binding affinity. It has also been noted that there is a preference for D-lysine on binding DNA, but for heparin the preference is much less pronounced. Finally, the binder:DNA aggregates imaged by TEM are small enough that they may successfully undergo endocytosis into mammalian cells and hence could be useful DNA transfection agents. 
+\end{abstract}
+
+%----------------------------------------------------------------------------------------
+%	ACKNOWLEDGEMENTS
+%----------------------------------------------------------------------------------------
+
+\begin{acknowledgements}
+\addchaptertocentry{\acknowledgementname} 
+\raggedright
+% Add the acknowledgements to the table of contents
+
+If I had been told at the beginning of my leave of absence, that in two years time I'd be doing a MSc in Chemistry, supervised by one of the most well-known LGBT chemists, I would have thought you'd gone completely bonkers. It certainly hasn't been easy to get to this point, and this thesis is the result of an awful lot of blood, sweat, tears and a slightly disturbing amount of coffee, but I wouldn't change it for the world. 
+
+I suppose I should start by thanking my supervisor, Professor David Smith. I am incredibly grateful for all the support and your unwavering belief that I could do this, especially when I couldn't believe in myself. 
+
+The DKS group,  thank you for all the homemade brownies and flapjack, and for not judging my music taste \textit{too} much.  
+\newline
+Lizzie, you're the best person I could have hoped to be buddied with when I arrived at York. You will make a fantastic teacher, and they will be so lucky to have you. 
+\newline
+Kirsten, I hope you don't break too much glassware over the next two years, even if your nickname is  "The Hulk", and that your gels don't go walkies inside the rotavap \textit{too} often.  
+\newline
+Phillip, I never will be able to listen to the Grease soundtrack again, without thinking of you. I'm not quite sure how I feel about this. 
+\newline
+V\^{a}nia, thank you for putting up with all of my emails, especially the ones sent in a blind panic over Mallard Blue not really living up to its name. 
+
+The PAC group, thank you for all the unexpected slices of cake and lunchtime chat. I still don't know what Sam was on during the entire 'Rotocats' saga.  Dr Ian George, you're quite honestly frighteningly clever, but you always seem to know exactly what to say when I'm freaking out over everything, most notably during the period where I felt like I was running around in circles and getting nowhere fast.
+
+I must also thank Heather Fish and Lewis Hall (NMR), Karl Heaton and Rosaria Cercola (Mass Spec), Meg Stark (TEM) and Dr Andrew Leech (CD).
+
+Alex Wolfe, Lucy Fox and Mink-Owl Tuckey, thank you for the cuddles, the postcards you've sent me and I still maintain baking vegan chocolate cake at 2am definitely isn't weird.  
+
+Nina Leeb, You're my favourite. Mostly for all the times you've interpreted the error messages Overleaf has given me, after I've done something stupid. "Not in outer par mode" being the most common (and infuriatingly difficult to fix at times).
+
+David Turnbull and Peter Hardwidge, we did it. We got through this together. 
+
+\end{acknowledgements}
+
+%----------------------------------------------------------------------------------------
+%	LIST OF CONTENTS/FIGURES/TABLES PAGES
+%----------------------------------------------------------------------------------------
+
+\tableofcontents % Prints the main table of contents
+
+\listoffigures % Prints the list of figures
+
+\listoftables % Prints the list of tables
+
+
+%----------------------------------------------------------------------------------------
+%	THESIS CONTENT - CHAPTERS
+%----------------------------------------------------------------------------------------
+
+\mainmatter % Begin numeric (1,2,3...) page numbering
+
+\pagestyle{plain} % Return the page headers back to the "thesis" style
+\raggedright
+% Include the chapters of the thesis as separate files from the Chapters folder
+% Uncomment the lines as you write the chapters
+\include{Chapters/Introduction}
+\include{Chapters/Results_and_discussion}
+\include{Chapters/Conclusions} 
+\include{Chapters/Furtherwork} 
+\include{Chapters/Experimental} 
+
+%----------------------------------------------------------------------------------------
+%	ABBREVIATIONS
+%----------------------------------------------------------------------------------------
+
+\begin{abbreviations}{ll} % Include a list of abbreviations (a table of two columns)
+
+\textbf{ATIII} & Antithrombin III \\
+\textbf{CAC} & Critical Aggregation Concentration \\
+\textbf{Cas9} & CRISPR associated gene 9 \\
+\textbf{CD} & Circular Dichroism \\
+\textbf{CF} & Cystic Fibrosis \\
+\textbf{CFTR} & Cystic Fibrosis Transmembrane Conductance Regulator \\
+\textbf{CRISPR} & Clustered Regularly Interspaced Short Palindromic Repeat\\
+\textbf{DCM} & Dichloromethane\\
+\textbf{DLS} & Dynamic Light Scattering \\
+\textbf{DNA} & Deoxyribose Nucleic Acid \\
+\textbf{DOTMA} & N-[1(2,3-dioleyloxy)propyl]-N,N,N-trimethylammonium chloride \\
+\textbf{DOSPA} & 2,3-dioleyloxy-N-[2(sperminecarboxido)ethyl]-N,N,-dimethyl-1- \\
+ & 
+propanaminium trifluoroacetate \\
+\textbf{DVT} & Deep Vein Thrombosis \\
+\textbf{EthBr} & Ethidium Bromide \\
+\textbf{FEV\textsubscript{1}} & Forced Expiratory Volume in 1 Second \\
+\textbf{GTMAC} & Glycidyltrimethylammonium chloride\\
+\textbf{HCl} & Hydrochloric Acid \\
+\textbf{HIP} & Heparin Interacting Protein \\
+\textbf{HIPAP} & Heparin Interacting Protein Analogue Peptide \\
+\textbf{IR} & Infrared Spectroscopy \\
+\textbf{ITC} & Isothermal Titration Calorimetry\\
+\textbf{LMWH} & Low Molecular Weight Heparin \\
+\textbf{MalB} & Mallard Blue \\
+\textbf{MeOH} & Methanol \\
+\textbf{MS} & Mass Spectrometry \\
+\textbf{NMR} & Nuclear Magnetic Resonance \\
+\textbf{NOAC} & Novel Oral Anticoagulant \\
+\textbf{PAH} & Poly(allylamine hydrochloride) \\
+\textbf{PAMAM} & Polyamidoamine \\
+\textbf{PBS} & Phosphate Buffered Saline \\
+\textbf{PEI} & Polyethyleneimine \\
+\textbf{PLL} & Poly-L-Lysine \\
+\textbf{sgRNA} & single guide RNA \\
+\textbf{SAMul} & Self Assembled Multivalency \\
+\textbf{TBTU} & N,N,N',N'-Tetramethyl-O-(benzotriazol-1-yl)uronium \\ & tetrafluoroborate \\
+\textbf{TEM} & Transmission Electron Microscopy \\
+\textbf{UFH} & Unfractionated Heparin \\
+\textbf{UV} & Ultraviolet \\
+\textbf{vCJD} & variant Creutzfeld-Jakob Disease \\
+\end{abbreviations}
+
+%----------------------------------------------------------------------------------------
+%	THESIS CONTENT - APPENDICES
+%----------------------------------------------------------------------------------------
+
+\appendix % Cue to tell LaTeX that the following "chapters" are Appendices
+
+% Include the appendices of the thesis as separate files from the Appendices folder
+% Uncomment the lines as you write the Appendices
+\include{Appendices/FurtherDLS}
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+\printbibliography[heading=bibintoc]
+
+%----------------------------------------------------------------------------------------
+
+\end{document}  
